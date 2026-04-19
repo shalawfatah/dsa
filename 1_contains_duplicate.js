@@ -14,3 +14,18 @@ console.log("solution 1", contains_duplicate([1, 2, 3, , 4]));
 // Set HELPS BECAUSE IT DOES NOT TAKE DUPLICATE
 
 // SOLUTION #2
+function has_duplicate(arr) {
+  const seen = {};
+  for (let item of arr) {
+    if (seen[item]) return true;
+    seen[item] = true;
+  }
+  return false;
+}
+
+console.log("solution 2", has_duplicate([1, 2, 3, 4, 4]));
+console.log("solution 2", has_duplicate([1, 2, 3, 4]));
+
+// WE CREATE A HASHMAP AND SET EVERY ARRAY ELEMENT AS KEY AND VALUE AS TRUE
+// IF KEY IS ALREDAY THERE, THEN WE RETURN TRUE, ELSE WE REGISTER OBJECT
+// FINALLY, WE RETURN FALSE
