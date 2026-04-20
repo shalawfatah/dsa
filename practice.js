@@ -16,3 +16,7 @@ function is_valid_anagram(x, y) {
   return true;
 }
 console.log(is_valid_anagram(str_1, str_2));
+
+function is_valid(x, y) {
+  return [...x].sort().join("") === [...y].sort().join("");
+}
