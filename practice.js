@@ -1,9 +1,3 @@
-function practice(arr) {
-  const seen = {};
-  for (let item of arr) {
-    seen[item] = true;
-  }
-  return seen;
+function has_duplicate(arr) {
+  return arr.length !== new Set(arr).size;
 }
-
-console.log(practice([1, 22, "hi"]));
