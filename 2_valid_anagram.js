@@ -14,7 +14,9 @@ const d = "carrace";
 
 function valid_anagram(x, y) {
   if (x.length === y.length) {
-    return [...x].sort().join("") === [...y].sort().join("");
+    const new_x = x.toLowerCase();
+    const new_y = y.toLowerCase();
+    return [...new_x].sort().join("") === [...new_y].sort().join("");
   }
   return false;
 }
@@ -22,3 +24,9 @@ function valid_anagram(x, y) {
 console.log(valid_anagram(s, t));
 console.log(valid_anagram(a, b));
 console.log(valid_anagram(c, d));
+
+/*
+- LEARN HOW TO CONVERT STRING TO ARRAY
+- LEARN HOW TO CONVERT ARRAY TO STRING
+- SORTING COULD HAVE EDGE CASES LIKE CAPITAL LETTERS
+*/

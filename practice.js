@@ -1,3 +1,3 @@
-function has_duplicate(arr) {
-  return arr.length !== new Set(arr).size;
-}
+const s = "racecAr";
+console.log([...s]);
+console.log([...s].sort());
