@@ -29,4 +29,18 @@ console.log(valid_anagram(c, d));
 - LEARN HOW TO CONVERT STRING TO ARRAY
 - LEARN HOW TO CONVERT ARRAY TO STRING
 - SORTING COULD HAVE EDGE CASES LIKE CAPITAL LETTERS
+- LEARN HOW TO TURN STRINGS/ARRAY INTO KEY-VALUE PAIRS, KEY ELEMENT, VALUE INCREMENTAL NUMBER
 */
+
+function proper_anagram(x, y) {
+  if (x.length !== y.length) return false;
+  const obj = {};
+  for (let item of x) {
+    obj[item] = (obj[item] || 0) + 1;
+  }
+  for (let item of y) {
+    if (!obj[item]) return false;
+    obj[item]--;
+  }
+  return true;
+}

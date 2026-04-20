@@ -1,3 +1,8 @@
 const s = "racecAr";
-console.log([...s]);
-console.log([...s].sort());
+function strToObj(str) {
+  for (let x of str.toLowerCase()) {
+  }
+  return obj;
+}
+
+console.log(strToObj(s));
