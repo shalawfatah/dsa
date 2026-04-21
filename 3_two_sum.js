@@ -20,3 +20,8 @@ function two_sum(arr, target) {
 }
 const target = 7;
 console.log(two_sum(nums, 7));
+
+/*
+THIS IS ONE SIMPLE TRICK, TAKE ONE ITEM, LOOP THROUGH ARRAY, FIND IF TARGET MINUS ITEM EXISTS
+IF IT DOES, TAKE THEIR INDEX, Map IS EASY TO DO THAT 
+*/
