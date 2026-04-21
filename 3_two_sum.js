@@ -7,10 +7,12 @@ Return the answer with the smaller index first.
 */
 
 const nums = [8, 9, 10, 5, 3, 4];
-function two_sum(arr, target) {
+const target = 7;
+
+function two_sum(arr, tar) {
   const map = new Map();
   for (let i = 0; i < arr.length; i++) {
-    const completion = target - arr[i];
+    const completion = tar - arr[i];
     if (map.has(completion)) {
       return [map.get(completion), i];
     }
@@ -18,7 +20,6 @@ function two_sum(arr, target) {
   }
   return [];
 }
-const target = 7;
 console.log(two_sum(nums, 7));
 
 /*

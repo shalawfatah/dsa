@@ -1,22 +1,22 @@
-const str_1 = "anagram";
-const str_2 = "gramana";
+/*
+Given an array of integers `nums` and an integer `target`, return the indices `i` and `j` such that `nums[i] + nums[j] == target` and `i != j`.
 
-function is_valid_anagram(x, y) {
-  const obj = {};
-  for (let item of x) {
-    obj[item] = (obj[item] || 0) + 1;
-  }
-  // HERE obj = {a = 3, n = 1, g = 1, r = 1, m = 1}
-  for (let item of y) {
-    if (!obj[item]) return false;
-    // IF THERE IS NO g,r,a,m,n THEN NO ANAGRAM
-    obj[item]--;
-    // IF THERE IS g,r,a,m,n, DECREMENT VALUE
-  }
-  return true;
-}
-console.log(is_valid_anagram(str_1, str_2));
+You may assume that *every* input has exactly one pair of indices `i` and `j` that satisfy the condition.
 
-function is_valid(x, y) {
-  return [...x].sort().join("") === [...y].sort().join("");
+Return the answer with the smaller index first.
+*/
+
+function twoSum(arr, tar) {
+  const map = new Map();
+  for (let i = 0; i < arr.length; i++) {
+    const completion = tar - arr[i];
+    if (map.has(completion)) {
+      return [arr[completion], i];
+    }
+    map.set(arr[i], i);
+    console.log("item, index ", arr[i], i);
+  }
+  return [];
 }
+
+console.log(twoSum([1, 3, 5, 4], 7));
