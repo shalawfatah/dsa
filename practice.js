@@ -1,23 +1,9 @@
 /*
-Given an array of integers `nums` and an integer `target`, return the indices `i` and `j` such that `nums[i] + nums[j] == target` and `i != j`.
+Given an array of strings `strs`, group all *anagrams* together into sublists. You may return the output in **any order**.
 
-You may assume that *every* input has exactly one pair of indices `i` and `j` that satisfy the condition.
-
-Return the answer with the smaller index first.
+An **anagram** is a string that contains the exact same characters as another string, but the order of the characters can be different.
 */
 
-function twoSum(arr, target) {
-  const map = new Map();
-  for (let i = 0; i < arr.length; i++) {
-    const completion = target - arr[i];
-    if (map.has(completion)) {
-      return [map.get(completion), i];
-    }
-    map.set(arr[i], i);
-  }
-  return [];
-}
-const nums = [3, 4, 5, 6];
-const target = 7;
+const strs = ["act", "pots", "tops", "cat", "stop", "hat"];
 
-console.log(twoSum(nums, target));
+function groupAnagrams(arr) {}
