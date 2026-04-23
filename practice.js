@@ -1,21 +1,14 @@
 /*
-Given an array of strings `strs`, group all *anagrams* together into sublists. You may return the output in **any order**.
+Given an integer array `nums` and an integer `k`, return the `k` most frequent elements within the array.
 
-An **anagram** is a string that contains the exact same characters as another string, but the order of the characters can be different.
+The test cases are generated such that the answer is always **unique**.
+
+You may return the output in **any order**.
 */
 
-const strs = ["act", "pots", "tops", "cat", "stop", "hat"];
+const nums = [1, 2, 2, 3, 3, 3];
+const x = 2;
 
-function group_anagrams(arr) {
-  const map = new Map();
-  for (let item of arr) {
-    const sorted_str = item.split("").sort().join("");
-    if (!map.has(sorted_str)) {
-      map.set(sorted_str, []);
-    }
-    map.get(sorted_str).push(item);
-  }
-  return Array.from(map.values());
-}
+function topKFrequent(arr, k) {}
 
-console.log(group_anagrams(strs));
+console.log(topKFrequent(nums, x));
