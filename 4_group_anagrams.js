@@ -6,15 +6,15 @@ An **anagram** is a string that contains the exact same characters as another st
 const strs = ["act", "pots", "tops", "cat", "stop", "hat"];
 
 function group_anagrams(arr) {
-  const map = new Map();
+  const anagramMap = new Map();
   for (let item of arr) {
-    const sortedItem = item.split("").sort().join("");
-    if (!map.has(sortedItem)) {
-      map.set(sortedItem, []);
+    const sorted_str = item.split("").sort().join("");
+    if (!anagramMap.has(sorted_str)) {
+      anagramMap.set(sorted_str, []);
     }
-    map.get(sortedItem).push(item);
+    anagramMap.get(sorted_str).push(item);
   }
-  return Array.from(map.values());
+  return Array.from(anagramMap.values());
 }
 
 console.log(group_anagrams(strs));
