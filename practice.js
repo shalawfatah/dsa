@@ -26,3 +26,8 @@ const encoded = codec.encode(strs);
 const decoded = codec.decode(encoded);
 console.log("encoded ", encoded);
 console.log("decoded ", decoded);
+
+/*
+NOTES 
+- JOIN STRINGS WITH for LOOP & += 
+*/
