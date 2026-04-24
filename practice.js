@@ -16,17 +16,17 @@ class Codec {
     }
     return result;
   }
-  decode(str) {
+  decode(s) {
     let result = [];
     let i = 0;
-    while (i < str.length) {
+    while (i < s.length) {
       let j = i;
-      while (str[j] !== "#") {
+      while (s[j] !== "#") {
         j++;
       }
-      const length = parseInt(str.substring(i, j));
-      const s = str.substring(j + 1, j + 1 + length);
-      result.push(s);
+      const length = parseInt(s.substring(i, j));
+      const str = s.substring(j + 1, j + 1 + length);
+      result.push(str);
       i = j + 1 + length;
     }
     return result;
