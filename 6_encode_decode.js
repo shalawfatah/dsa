@@ -7,3 +7,14 @@ Machine 2 (receiver) has the function:
 */
 
 const strs = ["Hello", "World"];
+
+class Codec {
+  encode(strs) {}
+  decode(s) {}
+}
+
+const codec = new Codec();
+const encoded = codec.encode(strs);
+const decoded = codec.decode(encoded);
+console.log("encoded ", encoded);
+console.log("decoded ", decoded);
