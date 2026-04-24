@@ -11,22 +11,22 @@ const strs = ["Hello", "World"];
 class Codec {
   encode(strs) {
     let result = "";
-    for (let str of strs) {
-      result += str.length + "#" + str;
+    for (let item of strs) {
+      result += item.length + "#" + item;
     }
     return result;
   }
-  decode(strs) {
+  decode(str) {
     let result = [];
     let i = 0;
-    while (i < strs.length) {
+    while (i < str.length) {
       let j = i;
-      while (strs[j] !== "#") {
+      while (str[j] !== "#") {
         j++;
       }
-      const length = parseInt(strs.substring(i, j));
-      const str = strs.substring(j + 1, j + 1 + length);
-      result.push(str);
+      const length = parseInt(str.substring(i, j));
+      const s = str.substring(j + 1, j + 1 + length);
+      result.push(s);
       i = j + 1 + length;
     }
     return result;
