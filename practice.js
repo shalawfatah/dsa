@@ -1,23 +1,17 @@
 /*
-Given an integer array `nums` and an integer `k`, return the `k` most frequent elements within the array.
+Design an algorithm to encode **a list of strings** to **a string**. The encoded string is then sent over the network and is decoded back to the original list of strings.
 
-The test cases are generated such that the answer is always **unique**.
+Machine 1 (sender) has the function:
 
-You may return the output in **any order**.
+Machine 2 (receiver) has the function:
 */
 
-const nums = [1, 2, 2, 3, 3, 3];
-const x = 2;
+const strs = ["Hello", "World"];
 
-function topKFrequent(arr, k) {
-  const map = new Map();
-  for (let item of arr) {
-    map.set(item, (map.get(item) || 0) + 1);
-  }
-  return Array.from(map.entries())
-    .sort((a, b) => b[1] - a[1])
-    .slice(0, k)
-    .map((x) => x[0]);
-}
+class Codec {}
 
-console.log(topKFrequent(nums, x));
+const codec = new Codec();
+const encoded = codec.encode(strs);
+const decoded = codec.decode(encoded);
+console.log("encoded ", encoded);
+console.log("decoded ", decoded);
