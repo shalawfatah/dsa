@@ -16,11 +16,25 @@ class Codec {
     }
     return result;
   }
-  decode(s) {}
+  decode(s) {
+    const result = [];
+    let i = 0;
+    while (i < s.length) {
+      let j = i;
+      while (s[j] !== "#") {
+        j++;
+      }
+      const length = parseInt(s.substring(i, j));
+      const str = s.substring(j + 1, j + 1 + length);
+      result.push(str);
+      i = j + 1 + length;
+    }
+    return result;
+  }
 }
 
 const codec = new Codec();
 const encoded = codec.encode(strs);
-// const decoded = codec.decode(encoded);
+const decoded = codec.decode(encoded);
 console.log("encoded ", encoded);
-// console.log("decoded ", decoded);
+console.log("decoded ", decoded);
