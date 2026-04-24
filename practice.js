@@ -8,7 +8,18 @@ Machine 2 (receiver) has the function:
 
 const strs = ["Hello", "World"];
 
-class Codec {}
+class Codec {
+  encode(strs) {
+    let result = "";
+    for (let str of strs) {
+      result += str.length + "#" + str;
+    }
+    return result;
+  }
+  decode(strs) {
+    console.log(strs);
+  }
+}
 
 const codec = new Codec();
 const encoded = codec.encode(strs);
