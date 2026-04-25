@@ -10,3 +10,6 @@ const nums = [1, 2, 4, 6];
 const nums_2 = [-1, 0, 1, 2, 3];
 
 function product_except_self(nums) {}
+
+console.log(product_except_self(nums));
+console.log(product_except_self(nums_2));
