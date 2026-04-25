@@ -16,6 +16,7 @@ class Codec {
     }
     return result;
   }
+
   decode(s) {
     let result = [];
     let i = 0;
